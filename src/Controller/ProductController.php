@@ -5,7 +5,7 @@ use App\Model\Product;
 use App\Model\ProductManager;
 class ProductController
 {
-protected $productManager;
+protected ProductManager $productManager;
 
     public function __construct()
     {

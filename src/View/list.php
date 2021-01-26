@@ -8,19 +8,31 @@
     <title>Document</title>
 </head>
 <body>
-<table>
-    <?php foreach (products as $product): ?>
-<tr>
-    <td><?php echo $product->getId()?></td>
-    <td><?php echo $product->getProductname()?></td>
-    <td><?php echo $product->getCategory()?></td>
-    <td><?php echo $product->getPrice()?></td>
-    <td><?php echo $product->getAmount()?></td>
-    <td><?php echo $product->getDatecreate()?></td>
-    <td><?php echo $product->getProductdescrible()?></td>
+<table border="1px" >
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Price</th>
+        <th>Amount</th>
+        <th>Datecreate</th>
+        <th>Describle</th>
+        <th>Actions</th>
+    </tr>
+    <?php if (isset($products)) {
+        foreach ($products as $product): ?>
+    <tr>
+        <td><?php echo $product->getId()?></td>
+        <td><?php echo $product->getProductname()?></td>
+        <td><?php echo $product->getCategory()?></td>
+        <td><?php echo $product->getPrice()?></td>
+        <td><?php echo $product->getAmount()?></td>
+        <td><?php echo $product->getDatecreate()?></td>
+        <td><?php echo $product->getProductdescrible()?></td>
 
-</tr>
-    <?php endforeach; ?>
+    </tr>
+        <?php endforeach;
+    } ?>
 </table>
 </body>
 </html>
