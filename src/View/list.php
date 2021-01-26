@@ -30,7 +30,8 @@
                 <td><?php echo $product->getAmount() ?></td>
                 <td><?php echo $product->getDatecreate() ?></td>
                 <td><?php echo $product->getProductdescrible() ?></td>
-
+<td>
+    <button><a href="index.php?page=delete&id=<?php echo $product->getId()?>">Delete</a></button></td>
             </tr>
         <?php endforeach;
     } ?>

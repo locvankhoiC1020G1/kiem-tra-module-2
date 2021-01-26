@@ -33,9 +33,6 @@ class ProductManager
         $sql = "INSERT INTO products(productname,category,price,amount,productdescrible) VALUES
              (?,?,?,?,?)";
         $stmt = $this->dbConnect->connectDB()->prepare($sql);
-        /* $productId = $product->getId();*/
-/*        $go->bindParam(1,$product->getName());*/
-
         $stmt->bindParam(1,$product->getProductname());
         $stmt->bindParam(2,$product->getCategory());
         $stmt->bindParam(3,$product->getPrice());
@@ -45,4 +42,10 @@ class ProductManager
         $stmt->execute();
     }
 
+    public function delete($id)
+    {
+$sql = "DELETE FROM `products` WHERE id=$id";
+$go =$this->dbConnect->connectDB()->prepare($sql);
+$go->execute();
+}
 }

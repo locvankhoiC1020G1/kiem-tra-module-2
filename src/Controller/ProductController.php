@@ -37,4 +37,12 @@ class ProductController
             header('Location: index.php');
         }
     }
+
+    public function deleteProduct()
+    {
+        $id = $_GET['id'];
+        $this->productManager->delete($id);
+        header("Location: index.php");
+        
+    }
 }
