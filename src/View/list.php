@@ -8,7 +8,8 @@
     <title>Document</title>
 </head>
 <body>
-<table border="1px" >
+<table border="1px">
+    <a href="src/View/add-product.php"> Thêm sản phẩm </a>
     <tr>
         <th>ID</th>
         <th>Name</th>
@@ -21,16 +22,16 @@
     </tr>
     <?php if (isset($products)) {
         foreach ($products as $product): ?>
-    <tr>
-        <td><?php echo $product->getId()?></td>
-        <td><?php echo $product->getProductname()?></td>
-        <td><?php echo $product->getCategory()?></td>
-        <td><?php echo $product->getPrice()?></td>
-        <td><?php echo $product->getAmount()?></td>
-        <td><?php echo $product->getDatecreate()?></td>
-        <td><?php echo $product->getProductdescrible()?></td>
+            <tr>
+                <td><?php echo $product->getId() ?></td>
+                <td><?php echo $product->getProductname() ?></td>
+                <td><?php echo $product->getCategory() ?></td>
+                <td><?php echo $product->getPrice() ?></td>
+                <td><?php echo $product->getAmount() ?></td>
+                <td><?php echo $product->getDatecreate() ?></td>
+                <td><?php echo $product->getProductdescrible() ?></td>
 
-    </tr>
+            </tr>
         <?php endforeach;
     } ?>
 </table>

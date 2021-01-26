@@ -1,4 +1,9 @@
 <?php
-require_once __DIR__.'/vendor/autoload.php';
-$test = new \App\Controller\ProductController();
+require_once __DIR__ . '/vendor/autoload.php';
+
+use App\Controller\ProductController;
+
+$test = new ProductController();
 $test->viewAllProduct();
+$test->addProducts();
+
